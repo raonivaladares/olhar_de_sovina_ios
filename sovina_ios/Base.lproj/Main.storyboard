@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HN8-Cr-ukb">
-                                <rect key="frame" x="20" y="80" width="560" height="262"/>
+                                <rect key="frame" x="20" y="28" width="560" height="262"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giy-Ul-xgg">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="21"/>
@@ -34,9 +34,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor - Ex: R$ 2,55" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="993-45-ams">
                                         <rect key="frame" x="0.0" y="91" width="168" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="168" id="fC9-Ru-Eez"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -47,7 +44,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantidade - Ex: 120g" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvd-gN-52w">
-                                        <rect key="frame" x="0.0" y="182" width="165" height="30"/>
+                                        <rect key="frame" x="0.0" y="182" width="168" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -58,24 +55,41 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="i9o-wj-VNe" firstAttribute="trailing" secondItem="993-45-ams" secondAttribute="trailing" id="dsC-Do-ZYG"/>
+                                    <constraint firstItem="vvd-gN-52w" firstAttribute="trailing" secondItem="i9o-wj-VNe" secondAttribute="trailing" id="NDR-tw-L02"/>
+                                    <constraint firstItem="993-45-ams" firstAttribute="width" secondItem="NnU-Ho-veZ" secondAttribute="width" id="Xco-9t-FTp"/>
+                                    <constraint firstItem="i9o-wj-VNe" firstAttribute="width" secondItem="NnU-Ho-veZ" secondAttribute="width" id="n1K-24-Kep"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2o-7g-k18">
-                                <rect key="frame" x="20" y="535" width="560" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2o-7g-k18">
+                                <rect key="frame" x="20" y="358" width="560" height="45"/>
                                 <color key="backgroundColor" red="0.33241945253674299" green="0.57450571446719201" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6Sm-IG-5S3"/>
+                                </constraints>
                                 <state key="normal" title="Compare">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchButtonCompare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnS-hk-WAC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HN8-Cr-ukb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="4tW-78-ss9"/>
-                            <constraint firstItem="HN8-Cr-ukb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Do5-k4-U6p"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HN8-Cr-ukb" secondAttribute="trailing" id="M5u-Ra-HZ5"/>
+                            <constraint firstItem="HN8-Cr-ukb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="06N-UQ-eFJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HN8-Cr-ukb" secondAttribute="trailing" id="0cN-Dk-AVM"/>
+                            <constraint firstItem="HN8-Cr-ukb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5kj-az-l1c"/>
+                            <constraint firstItem="p2o-7g-k18" firstAttribute="top" secondItem="HN8-Cr-ukb" secondAttribute="bottom" constant="68" id="gkV-eu-CmY"/>
+                            <constraint firstItem="p2o-7g-k18" firstAttribute="centerX" secondItem="HN8-Cr-ukb" secondAttribute="centerX" id="lN1-YY-nlB"/>
+                            <constraint firstItem="p2o-7g-k18" firstAttribute="leading" secondItem="HN8-Cr-ukb" secondAttribute="leading" id="uYK-OQ-SUG"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="textFieldPriceProduct01" destination="993-45-ams" id="g78-Zs-VHb"/>
+                        <outlet property="textFieldQuantityProduct01" destination="NnU-Ho-veZ" id="YWz-nG-tiI"/>
+                        <outlet property="textFieldQuantityProduct02" destination="vvd-gN-52w" id="0we-Ky-DQG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
