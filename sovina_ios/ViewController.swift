@@ -46,11 +46,11 @@ class ViewController: UIViewController {
             let result = (quantityProduct02 * priceProduct01) / quantityProduct01
             
             if(priceProduct02 > result) {
-                
+                self .message(self, message: "Product 1 is cheaper")
             } else if (priceProduct02 < result) {
-                
+                self .message(self, message: "Product 2 is cheaper")
             } else {
-                
+                self .message(self, message: "Product 1 and 2 have the seme price")
             }
         }
         
